@@ -13,12 +13,21 @@
 }
 
 body {
-    background-color: var(--color-primary);
-    color: var(--color-text-on-primary);
     font-family: var(--font-family);
 }
 
-p {
+.body--primary {
+    background-color: var(--color-primary);
+    color: var(--color-text-on-primary);
+}
+
+.body--secondary {
+    background-color: var(--color-text-on-primary);
+    color: var(--color-primary);
+}
+
+p,
+h2 {
     margin: 0;
 }
 
@@ -100,4 +109,38 @@ a {
 
 .button__icon {
     vertical-align: middle;
+}
+
+.main {
+    padding: 150px;
+}
+
+@media (max-width: 1220px) {
+    .button {
+        font-size: 24px;
+        padding: 0 32px;
+        height: 70px;
+    }
+
+    .button img {
+        width: 20px;
+    }
+}
+
+@media (max-width: 815px) {
+    .main {
+        padding: 75px;
+    }
+}
+
+@media (max-width: 700px) {
+    .button-container {
+        margin-top: 24px;
+        flex-wrap: wrap;
+    }
+
+    .button {
+        font-size: 16px;
+        margin-top: 24px;
+    }
 }
